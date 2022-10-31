@@ -1,0 +1,43 @@
+.detalhes{
+    padding: 20px;
+    background-color: #5c1520;
+    margin-top: 8vh;
+    color: white;
+    border-radius: 5px;
+    font-family: Arial, Helvetica, sans-serif;
+    
+}
+
+h2{
+    margin-left: 1rem;
+}
+
+
+
+.filme{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+  }
+  .imagem{
+    width: 20em;
+    max-width: 50%;
+    margin: 1rem;
+    border-radius: 5px;
+  }
+
+.texto{
+    margin: 1rem;
+    font-size: 0.80em;
+}
+
+span{
+    font-weight: bold,
+}
+
+.btn-danger{
+    margin-top: 5vh;
+    margin-left: 5vh;
+}
