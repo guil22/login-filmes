@@ -15,21 +15,34 @@ export const AuthProvider = ({ children }) => {
     setLoad(false);
   }, []);
 
+  const cadastro = (userName, email, password) => {
+    const users = JSON.parse(localStorage.getItem("users")) ?? [];
+
+    users.push({
+      userName,
+      email,
+      password,
+    });
+    localStorage.setItem("user", JSON.stringify(users));
+    navgate("/login");
+  };
+
   const login = (email, password) => {
     console.log("login auth", { email, password });
 
+    const users = JSON.parse(localStorage.getItem("users"));
+    const user = users.find(
+      (user) => user.email === email && user.password === password
+    );
     //criar sessao na api
-
-    const loggedUser = {
-      id: "123",
-      email,
-    };
-
-    localStorage.setItem("user", JSON.stringify(loggedUser));
-
-    if (password === "123") {
+    if (user) {
+      const loggedUser = {
+        userName: user.userName,
+      };
       setuser(loggedUser);
       navgate("/");
+    } else {
+      alert("Dados inválidos!");
     }
   };
 
@@ -41,7 +54,7 @@ export const AuthProvider = ({ children }) => {
   };
   return (
     <AuthContext.Provider
-      value={{ authenticated: !!user, user, load, login, logout }}
+      value={{ authenticated: !!user, user, load, login, logout, cadastro }}
     >
       {children}
     </AuthContext.Provider>

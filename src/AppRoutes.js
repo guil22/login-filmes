@@ -7,9 +7,9 @@ import {
   useNavigate,
 } from "react-router-dom";
 import LoginPage from "./Pages/LoginPage";
-import Home from "./Pages/Home";
-import Detalhes from "./Pages/Home";
-import Filme from "./Pages/Home";
+import Home from "./Pages/Home/index";
+import Detalhes from "./Pages/Home/Detalhes";
+import Filme from "./Pages/Home/Filme";
 import { AuthProvider, AuthContext } from "./contexts/auth";
 import { PesqProvider, PesqContext } from "./contexts/Context";
 import Cadastro from "./Pages/Cadastro";

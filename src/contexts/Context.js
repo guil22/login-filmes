@@ -7,7 +7,7 @@ export const PesqProvider = (props) => {
 
   return (
     <PesqContext.Provider value={{ pesquisa, setPesquisa }}>
-      {props.children}{" "}
+      {props.children}
     </PesqContext.Provider>
   );
 };

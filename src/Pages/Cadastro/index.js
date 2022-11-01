@@ -3,17 +3,17 @@ import "./style.css";
 import { AuthContext } from "../../contexts/auth";
 
 function Cadastro() {
-  const { authenticated, login } = useContext(AuthContext);
+  const { cadastro } = useContext(AuthContext);
 
   const [email, setemail] = useState("");
   const [password, setpassword] = useState("");
-  const [user, setUser] = useState("");
+  const [userName, setUserName] = useState("");
 
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    console.log("submit", { email, password });
-    login(email, password); // integração c context e api
+    console.log("submit", { email, password, userName });
+    cadastro(userName, email, password);
   };
 
   return (
@@ -22,13 +22,14 @@ function Cadastro() {
 
       <form className="form" onSubmit={handleSubmit}>
         <div className="field">
-          <label htmlFor="user">Nome de Usuário</label>
+          <label htmlFor="userName">Nome de Usuário</label>
           <input
-            type="user"
-            name="user"
-            id="user"
-            value={user}
-            onChange={(e) => setUser(e.target.value)}
+            type="text"
+            name="userName"
+            id="userName"
+            value={userName}
+            required
+            onChange={(e) => setUserName(e.target.value)}
           />
         </div>
         <div className="field">
@@ -37,6 +38,7 @@ function Cadastro() {
             type="email"
             name="email"
             id="email"
+            required
             value={email}
             onChange={(e) => setemail(e.target.value)}
           />
@@ -47,12 +49,13 @@ function Cadastro() {
             type="password"
             name="password"
             id="password"
+            required
             value={password}
             onChange={(e) => setpassword(e.target.value)}
           />
         </div>
         <div className="actions">
-          <button type="submit">Entrar</button>
+          <button type="submit">Registrar</button>
         </div>
       </form>
     </div>
