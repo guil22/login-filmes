@@ -19,7 +19,7 @@ function LoginPage() {
   return (
     <div id="login">
       <h1 className="title">Login</h1>
-      <p>{String(authenticated)} </p>
+
       <form className="form" onSubmit={handleSubmit}>
         <div className="field">
           <label htmlFor="email">Email</label>
@@ -42,12 +42,14 @@ function LoginPage() {
           />
         </div>
         <div className="actions">
-          <button type="submit">Entrar</button>
+          <button type="submit" className="btnn btn-sm">
+            Entrar
+          </button>
         </div>
       </form>
-      <div>
-        <h3>Ainda não é registrado?</h3>
-        <Link to={`/Cadastro`} className="btn" type="submit">
+      <div className="novo">
+        <h5>Ainda não é registrado?</h5>
+        <Link to={`/Cadastro`} className="btn btn-sm" type="submit">
           Criar conta
         </Link>
       </div>

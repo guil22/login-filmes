@@ -23,7 +23,7 @@ export const AuthProvider = ({ children }) => {
       email,
       password,
     });
-    localStorage.setItem("user", JSON.stringify(users));
+    localStorage.setItem("users", JSON.stringify(users));
     navgate("/login");
   };
 

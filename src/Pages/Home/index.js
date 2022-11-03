@@ -31,7 +31,6 @@ function Home() {
       .then((res) => res.json())
       .then((data) => setLista(data.results));
   }, []);
-  console.log(REACT_APP_API_KEY);
 
   const handleEnter = (e) => {
     if (e.key === "Enter") {
@@ -50,9 +49,6 @@ function Home() {
 
   return (
     <div className="App">
-      <h1>HomePage</h1>
-      <p>{String(authenticated)}</p>
-      <button onClick={handleLogout}>Logout</button>
       <div className="jumbotron jumbotron-fluid">
         <h1 className="display-4">Filmes Populares</h1>
       </div>
@@ -76,6 +72,9 @@ function Home() {
           >
             Pesquisar
           </Link>
+          <button className="logout btn-link" onClick={handleLogout}>
+            SAIR
+          </button>
         </form>
 
         <div className="filmes">

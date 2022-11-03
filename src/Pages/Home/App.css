@@ -1,32 +1,29 @@
-body{
+body {
   background-color: #fbeff1;
 }
-.App{
+.App {
   position: relative;
   min-height: 100vh;
 }
 
-.jumbotron{
+.jumbotron {
   display: flex;
   align-items: center;
   color: white;
-  background-color:#5c1520 ;
+  background-color: #5c1520;
   justify-content: center;
   height: 15vh;
-  
-  
 }
 
-.top{
+.top {
   margin-bottom: 8rem;
 }
 
-.container{
-  
-  padding-bottom: 2.5rem; 
+.container {
+  padding-bottom: 2.5rem;
 }
 
-.barra{
+.barra {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -34,67 +31,70 @@ body{
   margin-bottom: 5rem;
 }
 
-
-
-.former{
+.former {
   width: 50%;
   margin-right: 15px;
   box-sizing: border-box;
   border: 2px solid rgb(252, 151, 151);
   border-radius: 4px;
-  
 }
 
 .former:focus {
   outline: none !important;
-  border:2px solid #8a1f2f;
+  border: 2px solid #8a1f2f;
   box-shadow: 0 0 5px #f89494;
 }
 
-.card-title{
+.card-title {
   color: #7b1c2a;
 }
 
-.btn{
+.btn {
   background-color: #ce2f47;
   color: white;
 }
-.btn:hover{
-  background-color: #8a1f2f ;
+.btn:hover {
+  background-color: #8a1f2f;
   color: white;
 }
-.btn:focus {     
-  background-color:#8a1f2f;   
-  color: white; 
+.btn:focus {
+  background-color: #8a1f2f;
+  color: white;
+}
+.logout {
+  position: absolute;
+  right: 2%;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  border: none;
+  color: #5c1520;
+  font-weight: bolder;
 }
 
-.card{
+.card {
   width: 15em;
   margin: 10px;
   background-color: #fbeff1;
   border: 1px solid #f3cbd1;
-  
 }
 
-.filmes{
+.filmes {
   display: flex;
   flex-flow: row wrap;
   justify-content: space-around;
   margin-bottom: 4rem;
-
 }
 
-.pesquisa{
+.pesquisa {
   display: flex;
   flex-direction: column;
   align-items: center;
   color: #5c1520;
   justify-content: center;
-  font-family:Verdana, Geneva, Tahoma, sans-serif
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
-
-footer{
+footer {
   background-color: #5c1520;
   min-height: 5em;
   color: white;
@@ -105,5 +105,4 @@ footer{
   bottom: 0;
   width: 100%;
   height: 2.5rem;
-  
 }

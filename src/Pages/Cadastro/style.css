@@ -1,4 +1,5 @@
-#login {
+#cadastro {
+  color: #5c1520;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -7,26 +8,28 @@
   padding: 0 2rem;
 }
 
-#login .form {
-  background-color: lightcyan;
+#cadastro .form {
+  color: white;
+  background-color: #5c1520;
+  border-radius: 4px;
   width: 100%;
   max-width: 480px;
   padding: 0.5rem;
 }
 
-#login .field label {
+#cadastro .field label {
   display: block;
 }
 
-#login .field {
+#cadastro .field {
   padding-bottom: 0.5rem;
 }
 
-#login .field input {
+#cadastro .field input {
   width: 90%;
 }
 
-#login .actions {
+#cadastro .actions {
   text-align: center;
   margin-top: 1rem;
 }

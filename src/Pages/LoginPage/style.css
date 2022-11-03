@@ -1,4 +1,5 @@
 #login {
+  color: #5c1520;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -8,7 +9,9 @@
 }
 
 #login .form {
-  background-color: lightcyan;
+  color: white;
+  background-color: #5c1520;
+  border-radius: 4px;
   width: 100%;
   max-width: 480px;
   padding: 0.5rem;
@@ -29,4 +32,7 @@
 #login .actions {
   text-align: center;
   margin-top: 1rem;
+}
+.novo {
+  margin-top: 20px;
 }
